@@ -1,6 +1,6 @@
 /* Global Styling */
 * {
-        font-family: "Monocraft";
+        font-family: "Monocraft Nerd Font";
         font-weight: normal;
         /*font-size: 13.9px;*/
         font-size: 14px;
@@ -35,8 +35,8 @@ window#waybar {
         padding: 0px;
         padding-top: 0px;
         padding-bottom: 0px;
-        padding-left: 4px;
-        padding-right: 4px;
+        padding-left: 6px;
+        padding-right: 6px;
         /*animation: ws_normal 20s ease-in-out 1;*/
         animation: none;
 }
@@ -52,8 +52,8 @@ window#waybar {
         padding: 0px;
         padding-top: 0px;
         padding-bottom: 0px;
-        padding-left: 4px;
-        padding-right: 4px;
+        padding-left: 6px;
+        padding-right: 6px;
         /*animation: ws_normal 20s ease-in-out 1;*/
         animation: none;
 }
