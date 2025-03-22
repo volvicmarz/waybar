@@ -98,11 +98,11 @@
                         ""
                 ],
                 "custom/updates": {
-                        "exec": "~/.local/share/bin/systemupdate.sh",
+                        "exec": "$HOME/waybar/scripts/systemupdate.sh",
                         "return-type": "json",
                         "format": "{}",
                         "rotate": 0,
-                        "on-click": "hyprctl dispatch exec '$HOME/.local/share/bin/systemupdate.sh up'",
+                        "on-click": "hyprctl dispatch exec '$HOME/waybar/scripts/systemupdate.sh up'",
                         "interval": 43200,
                         "tooltip": true,
                         "signal": 20
@@ -144,7 +144,7 @@
                         "format": "{}",
                         "format-en": "US",
                         "format-ru": "RU",
-                        "on-click": "$HOME/.local/share/bin/keyboardswitch.sh"
+                        "on-click": "$HOME/waybar/scripts/keyboardswitch.sh"
                 },
                 "cava": {
                         "framerate": 120,
@@ -174,7 +174,7 @@
                         }
                 },
                 "custom/media": {
-                        "exec": "/usr/bin/python3 ~/.config/waybar/scripts/mediaplayer.py",
+                        "exec": "/usr/bin/python3 $HOME/waybar/scripts/mediaplayer.py",
                         "return-type": "json",
                         "format": "{}",
                         "tooltip": "{tooltip}",
@@ -192,8 +192,8 @@
                         },
                         "device": "intel_backlight",
                         "format": "{icon}",
-                        "on-click": "$HOME/.local/share/bin/hyprsunset.sh",
-                        "on-click-right": "~/.local/share/bin/shaders.sh",
+                        "on-click": "$HOME/waybar/scripts/hyprsunset.sh",
+                        // "on-click-right": "$/.local/share/bin/shaders.sh",
                         "tooltip-format": "{icon} {percent}",
                         "format-icons": [
                                 "",
@@ -213,8 +213,8 @@
                 "backlight": {
                         "device": "intel_backlight",
                         "format": "{percent}",
-                        "on-click": "$HOME/.local/share/bin/hyprsunset.sh",
-                        "on-click-right": "~/.local/share/bin/shaders.sh",
+                        "on-click": "$HOME/waybar/scripts/hyprsunset.sh",
+                        // "on-click-right": "$HOME/waybar/scripts/shaders.sh",
                         "tooltip-format": "{icon} {percent}%",
                         "on-scroll-up": "brightnessctl set 1%+",
                         "on-scroll-down": "brightnessctl set 1%-",
@@ -264,10 +264,10 @@
                         },
                         "tooltip": true,
                         "tooltip-format": "Device: {desc}",
-                        "on-click": "~/.local/share/bin/volumecontrol.sh -o m",
+                        "on-click": "$HOME/waybar/scripts/volumecontrol.sh -o m",
                         "on-click-right": "hyprctl dispatch exec pavucontrol",
-                        "on-scroll-up": "~/.local/share/bin/volumecontrol.sh -o i",
-                        "on-scroll-down": "~/.local/share/bin/volumecontrol.sh -o d",
+                        "on-scroll-up": "$HOME/waybar/scripts/volumecontrol.sh -o i",
+                        "on-scroll-down": "$HOME/waybar/scripts/volumecontrol.sh -o d",
                         "min-length": 1,
                         "max-length": 6
                 },
@@ -275,9 +275,9 @@
                         "format": "{volume}",
                         "tooltip": true,
                         "tooltip-format": "Device: {desc}",
-                        "on-click": "~/.local/share/bin/volumecontrol.sh -o m",
-                        "on-scroll-up": "~/.local/share/bin/volumecontrol.sh -o i",
-                        "on-scroll-down": "~/.local/share/bin/volumecontrol.sh -o d",
+                        "on-click": "$HOME/waybar/scripts/volumecontrol.sh -o m",
+                        "on-scroll-up": "$HOME/waybar/scripts/volumecontrol.sh -o i",
+                        "on-scroll-down": "$HOME/waybar/scripts/volumecontrol.sh -o d",
                         "min-length": 2,
                         "max-length": 6
                 },
@@ -287,11 +287,11 @@
                         "tooltip": false
                 },
                 "custom/wifi": {
-                        "exec": "~/.config/waybar/scripts/wifiinfo.sh",
+                        "exec": "$HOME/waybar/scripts/wifiinfo.sh",
                         "return-type": "json",
                         "format": "{}",
                         "tooltip": true,
-                        "on-click": "~/.config/waybar/scripts/wifimenu.sh -o i",
+                        "on-click": "$HOME/waybar/scripts/wifimenu.sh -o i",
                         "interval": 1,
                         "min-length": 1,
                         "max-length": 7
@@ -300,7 +300,7 @@
                         "format-wifi": "{essid}",
                         "format-ethernet": "{ifname}",
                         "tooltip": false,
-                        "on-click": "~/.config/waybar/scripts/wifimenu.sh -o i",
+                        "on-click": "$HOME/waybar/scripts/wifimenu.sh -o i",
                         "interval": 1,
                         "min-length": 1,
                         "max-length": 12
@@ -312,7 +312,7 @@
                                 "critical": 80
                         },
                         "format": "",
-                        "on-click": "$HOME/.local/share/bin/cpu.sh",
+                        "on-click": "$HOME/waybar/scripts/cpu.sh",
                         "interval": 1,
                         "tooltip": false,
                         "min-length": 1,
@@ -338,10 +338,10 @@
                         "max-length": 10
                 },
                 "custom/cpuinfo": {
-                        "exec": "~/.config/waybar/scripts/cpuinfo.sh",
+                        "exec": "$HOME/waybar/scripts/cpuinfo.sh",
                         "return-type": "json",
                         "format": "{}",
-                        "on-click": "$HOME/.local/share/bin/cpu.sh",
+                        "on-click": "$HOME/waybar/scripts/cpu.sh",
                         "tooltip": true,
                         "interval": 5,
                         "min-length": 4,
@@ -355,7 +355,7 @@
                         "max-length": 10
                 },
                 "custom/gpuinfo": {
-                        "exec": "~/.local/share/bin/gpuinfo.sh",
+                        "exec": "$HOME/waybar/scripts/gpuinfo.sh",
                         "return-type": "json",
                         "format": "{}",
                         "tooltip": true,
