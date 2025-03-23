@@ -221,7 +221,7 @@
                         "min-length": 1
                 },
                 "clock": {
-                        "timezone": "Asia/Baku",
+                        "timezone": "Europe/Berlin",
                         "format": "{:%H:%M}",
                         "rotate": 0,
                         "format-alt": "{:%d·%m·%y}",
