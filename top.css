@@ -3,13 +3,14 @@
         font-family: "Monocraft Nerd Font";
         font-weight: normal;
         font-size: 14px;
-        min-height: 12px;
+        min-height: 10px;
 }
 
 @import "theme.css";
 
 window#waybar {
         background: @main-bg;
+        /* background: rgba(255,255,255,0.5); */
 }
 
 #custom-updates {
@@ -24,15 +25,15 @@ window#waybar {
 }
 
 #workspaces button.empty {
-        color: rgba(0,0,0,0);
-        background-color: rgba(0,0,0,0);
+        color: @main-fg;
+        background-color: @media;
         border-radius: 0px;
         margin-top: -2px;
-        margin-bottom: -0px;
+        margin-bottom: 0px;
         margin-left: 0px;
         margin-right: 0px;
         padding: 0px;
-        padding-top: 0px;
+        padding-top: 3px;
         padding-bottom: 0px;
         padding-left: 6px;
         padding-right: 6px;
@@ -41,15 +42,15 @@ window#waybar {
 }
 
 #workspaces button {
-        color: #e37dd7;
-        background-color: @main-bg;
+        color: @main-fg;
+        background-color: @media;
         border-radius: 0px;
         margin-top: -2px;
         margin-bottom: -0px;
         margin-left: 0px;
         margin-right: 0px;
         padding: 0px;
-        padding-top: 0px;
+        padding-top: 3px;
         padding-bottom: 0px;
         padding-left: 6px;
         padding-right: 6px;
@@ -58,15 +59,15 @@ window#waybar {
 }
 
 #workspaces button.active {
-        color: #feee74;
-        background: @main-bg;
+        color: @module-fg;
+        background: @media;
         animation: ws_active 20s ease-in-out 1;
         transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
 }
 
 #workspaces button:hover {
         color: @module-fg;
-        background: @main-bg;
+        background: @blank-bg;
         /*animation: ws_hover 20s ease-in-out 1;*/
         /*transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);*/
         animation: none;
@@ -74,7 +75,14 @@ window#waybar {
 }
 
 #language {
-        margin-left: 0px;
+        color: @blank-bg;
+        background: @module-fg;
+        margin-right: 0px;
+        padding-left: 6px;
+        padding-right: 2px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+
 }
 
 #submap {
@@ -83,66 +91,38 @@ window#waybar {
 }
 
 #cava {
-        color: @main-fg;
-        background-color: @main-bg;
-        margin-left: 8px;
+        color: #ffffff;
+        background-color: @media;
+        margin-left: 0px;
         margin-right: 0px;
+        padding-right: 8px;
 }
 
 #custom-media {
         color: @main-fg;
         background-color: @media;
-        margin-top: 6px;
-        margin-bottom: 6px;
-        margin-left: 8px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 0px;
         margin-right: 0px;
         padding-right: 8px;
         padding-left: 10px;
 }
 
 #backlight.icon {
-        color: @blank-fg;
+        color: @module-fg;
         background: @blank-bg;
-        margin-top: 6px;
-        margin-bottom: 6px;
-        margin-left: 8px;
+        margin-left: 0px;
         margin-right: 0px;
-        padding-top: 1px;
+        padding-top: 0px;
         padding-bottom: 0px;
         padding-left: 8px;
-        padding-right: 8px;
-}
-
-#backlight.icon.min {
-        color: @max;
-        background: @min;
-}
-
-#backlight.icon.midl {
-        color: @midh;
-        background: @midl;
-}
-
-#backlight.icon.mid {
-        color: @min;
-        background: @mid;
-}
-
-#backlight.icon.midh {
-        color: @min;
-        background: @midh;
-}
-
-#backlight.icon.max {
-        color: @min;
-        background: @max;
+        padding-right: 4px;
 }
 
 #backlight {
         color: @main-fg;
-        background: @backlight;
-        margin-top: 6px;
-        margin-bottom: 6px;
+        background: @media;
         /*margin-right: 10px;*/
         margin-right: 0px;
         padding-left: 6px;
@@ -152,60 +132,29 @@ window#waybar {
 }
 
 #clock {
-        color: @module-fg;
-        background: @main-bg;
-        /*background: @main-bg;*/
-        margin-top: 5px;
-        margin-bottom: 5px;
-        margin-left: 10px;
-        margin-right: 10px;
+        color: @blank-bg;
+        background: @module-fg;
+        margin-right: 0px;
         padding-left: 6px;
         padding-right: 6px;
+        padding-top: 0px;
+        padding-bottom: 0px;
 }
 
 #pulseaudio.icon {
-        color: @blank-fg;
+        color: @module-fg;
         background: @blank-bg;
-        margin-top: 6px;
-        margin-bottom: 6px;
         margin-left: 0px;
         margin-right: 0px;
         padding-top: 0px;
         padding-bottom: 0px;
         padding-left: 8px;
-        padding-right: 8px;
-}
-
-#pulseaudio.icon.min {
-        color: @max;
-        background: @min;
-}
-
-#pulseaudio.icon.midl {
-        color: @midh;
-        background: @midl;
-}
-
-#pulseaudio.icon.mid {
-        color: @min;
-        background: @mid;
-}
-
-#pulseaudio.icon.midh {
-        color: @min;
-        background: @midh;
-}
-
-#pulseaudio.icon.max {
-        color: @min;
-        background: @max;
+        padding-right: 4px;
 }
 
 #pulseaudio {
         color: @main-fg;
         background: @pulseaudio;
-        margin-top: 6px;
-        margin-bottom: 6px;
         margin-right: 0px;
         padding-left: 6px;
         padding-right: 6px;
@@ -213,24 +162,30 @@ window#waybar {
         padding-bottom: 0px;
 }
 
+#custom-label {
+        color: @blank-bg;
+        background: @module-fg;
+        margin-right: 0px;
+        padding-left: 6px;
+        padding-right: 2px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+}
+
 #custom-wifi {
-        color: @blank-fg;
-        background: @norm;
-        margin-top: 6px;
-        margin-bottom: 6px;
+        color: @module-fg;
+        background: @blank-bg;
         margin-right: 0px;
         padding-top: 0px;
         padding-bottom: 0px;
         padding-left: 7px;
-        padding-right: 11px;
+        padding-right: 6px;
 }
 
 #network {
         color: @main-fg;
         background: @wifi;
-        margin-top: 6px;
-        margin-bottom: 6px;
-        margin-right: 10px;
+        margin-right: 0px;
         padding-left: 6px;
         padding-right: 6px;
         padding-top: 0px;
@@ -238,77 +193,39 @@ window#waybar {
 }
 
 #cpu.icon {
-        color: @blank-fg;
-        background: @norm;
-        margin-top: 6px;
-        margin-bottom: 6px;
+        color: @module-fg;
+        background: @blank-bg;
         margin-right: 0px;
-        padding-left: 6px;
-        padding-right: 12px;
+        padding-left: 8px;
+        padding-right: 6px;
         padding-top: 0px;
         padding-bottom: 0px;
-}
-
-#cpu.icon.norm {
-        color: @blank-fg;
-        background: @norm;
-}
-
-#cpu.icon.warning {
-        color: @blank-fg;
-        background: @warning;
-}
-
-#cpu.icon.critical {
-        color: @blank-fg;
-        background: @critical;
 }
 
 #cpu {
         color: @main-fg;
         background: @cpu;
-        margin-top: 6px;
-        margin-bottom: 6px;
-        margin-right: 10px;
+        margin-right: 0px;
         padding-left: 0px;
         padding-right: 0px;
         padding-top: 0px;
         padding-bottom: 0px;
 }
 
-#cpu.norm {
-        color: @norm;
-        background: @cpu;
-}
-
-#cpu.warning {
-        color: @warning;
-        background: @cpu;
-}
-
-#cpu.critical {
-        color: @critical;
-        background: @cpu;
-}
-
 #custom-cpuinfo.icon {
-        color: @blank-fg;
-        background: @norm;
-        margin-top: 6px;
-        margin-bottom: 6px;
+        color: @module-fg;
+        background: @blank-bg;
         margin-right: 0px;
         padding-top: 0px;
         padding-bottom: 0px;
         padding-left: 10px;
-        padding-right: 8px;
+        padding-right: 4px;
 }
 
 #custom-cpuinfo {
         color: @main-fg;
         background: @cpu;
-        margin-top: 6px;
-        margin-bottom: 6px;
-        margin-right: 10px;
+        margin-right: 0px;
         padding-left: 6px;
         padding-right: 6px;
         padding-top: 0px;
@@ -316,13 +233,11 @@ window#waybar {
 }
 
 #custom-gpuinfo.icon {
-        color: @blank-fg;
-        background: @norm;
-        margin-top: 6px;
-        margin-bottom: 6px;
+        color: @module-fg;
+        background: @blank-bg;
         margin-right: 0px;
         padding-left: 6px;
-        padding-right: 11px;
+        padding-right: 6px;
         padding-top: 0px;
         padding-bottom: 0px;
 }
@@ -330,140 +245,50 @@ window#waybar {
 #custom-gpuinfo {
         color: @main-fg;
         background: @cpu;
-        margin-top: 6px;
-        margin-bottom: 6px;
-        margin-right: 10px;
+        margin-right: 0px;
         padding-left: 6px;
         padding-right: 6px;
         padding-top: 0px;
         padding-bottom: 0px;
 }
 #memory.icon {
-        color: @blank-fg;
-        background: @norm;
-        margin-top: 6px;
-        margin-bottom: 6px;
+        color: @module-fg;
+        background: @blank-bg;
         margin-right: 0px;
         /*padding-left: 6px;*/
         /*padding-right: 11px;*/
         padding-top: 0px;
         padding-bottom: 0px;
         padding-left: 8px;
-        padding-right: 10px;
-}
-
-#memory.icon.norm {
-        color: @blank-fg;
-        background: @norm;
-}
-
-#memory.icon.warning {
-        color: @blank-fg;
-        background: @warning;
-}
-
-#memory.icon.critical {
-        color: @blank-fg;
-        background: @critical;
+        padding-right: 6px;
 }
 
 #memory {
         color: @main-fg;
         background: @memory;
-        margin-top: 6px;
-        margin-bottom: 6px;
-        margin-right: 10px;
+        margin-right: 0px;
         padding-left: 6px;
         padding-right: 6px;
         padding-top: 0px;
         padding-bottom: 0px;
 }
 
-#memory.norm {
-        color: @norm;
-        background: @memory;
-}
-
-#memory.warning {
-        color: @warning;
-        background: @memory;
-}
-
-#memory.critical {
-        color: @critical;
-        background: @memory;
-}
-
 #battery.icon {
         color: @blank-fg;
         background: @norm;
-        margin-top: 6px;
-        margin-bottom: 6px;
         margin-right: 0px;
-        padding-left: 9px;
-        padding-right: 8px;
+        padding-left: 10px;
+        padding-right: 9px;
         padding-top: 0px;
         padding-bottom: 0px;
-}
-
-#battery.icon.full {
-        color: @blank-fg;
-        background: @full;
-}
-
-#battery.icon.good {
-        color: @blank-fg;
-        background: @good;
-}
-
-#battery.icon.warning {
-        color: @blank-fg;
-        background: @warning;
-}
-
-#battery.icon.critical {
-        color: @blank-fg;
-        background: @critical;
-}
-
-#battery.icon.charging {
-        color: @blank-fg;
-        background: @charging;
 }
 
 #battery {
         color: @main-fg;
         background: @battery;
-        margin-top: 6px;
-        margin-bottom: 6px;
-        margin-right: 8px;
+        margin-right: 0px;
         padding-left: 8px;
         padding-right: 5px;
         padding-top: 0px;
         padding-bottom: 0px;
-}
-
-#battery.full {
-        color: @full;
-        background: @media;
-}
-
-#battery.good {
-        color: @good;
-        background: @media;
-}
-
-#battery.warning {
-        color: @warning;
-        background: @media;
-}
-
-#battery.critical {
-        color: @critical;
-        background: @media;
-}
-
-#battery.charging {
-        color: @charging;
-        background: @media;
 }

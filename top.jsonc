@@ -4,58 +4,8 @@
                 "layer": "top",
                 "position": "top",
                 "margin-top": 10,
-                "margin-bottom": 0,
-                "height": 1,
-                "fixed-center": true,
-                "exclusive": true,
-                "passthrough": false,
-                "gtk-layer-shell": false,
-                "reload_style_on_change": true,
-                "margin-left": 15,
-                "margin-right": 15,
-                "modules-center": ["hyprland/workspaces", ""],
-                "hyprland/workspaces": {
-                        "rotate": 0,
-                        "all-outputs": true,
-                        "active-only": false,
-                        "on-click": "activate",
-                        "on-click-right": "close",
-                        "disable-scroll": true,
-                        "on-scroll-down": "hyprctl dispatch workspace -1",
-                        "on-scroll-up": "hyprctl dispatch workspace +1",
-                        "format": "{icon}",
-                        "format-icons": {
-                                "1": "---------------------",
-                                "2": "---------------------",
-                                "3": "---------------------",
-                                "4": "---------------------",
-                                "5": "---------------------",
-                                "6": "---------------------",
-                                "7": "---------------------",
-                                "8": "---------------------",
-                                "9": "---------------------",
-                                "active": "---------------------"
-                        },
-                        "persistent-workspaces": {
-                                "1": [],
-                                "2": [],
-                                "3": [],
-                                "4": [],
-                                "5": [],
-                                "6": [],
-                                "7": [],
-                                "8": [],
-                                "9": []
-                        }
-                }
-        },
-        {
-                "mod": "dock",
-                "layer": "top",
-                "position": "top",
-                "margin-top": -7,
                 "margin-bottom": -8,
-                "height": 36,
+                "height": 30,
                 "fixed-center": true,
                 "exclusive": true,
                 "passthrough": false,
@@ -64,9 +14,12 @@
                 "margin-left": 15,
                 "margin-right": 15,
                 "modules-left": [
+                        "battery#icon",
+                        "battery",
+                        "custom/wifi",
+                        "network",
                         "backlight#icon",
                         "backlight",
-                        "custom/separators",
                         "pulseaudio#icon",
                         "pulseaudio",
                         "cava",
@@ -74,17 +27,15 @@
                         ""
                 ],
                 "modules-center": [
-                        "clock",
                         "custom/updates",
-                        // "hyprland/workspaces",
+                        "clock",
+                        "hyprland/workspaces",
                         ""
                 ],
                 "modules-right": [
                         "hyprland/submap",
                         "hyprland/language",
-                        "custom/separators",
-                        "custom/wifi",
-                        "network",
+                        "custom/label",
                         "cpu#icon",
                         "cpu",
                         "memory#icon",
@@ -93,8 +44,6 @@
                         "custom/cpuinfo",
                         "custom/gpuinfo#icon",
                         "custom/gpuinfo",
-                        "battery#icon",
-                        "battery",
                         ""
                 ],
                 "custom/updates": {
@@ -180,7 +129,7 @@
                         "tooltip": "{tooltip}",
                         "on-click": "playerctl play-pause",
                         "min-length": 5,
-                        "max-length": 30
+                        "max-length": 20
                 },
                 "backlight#icon": {
                         "states": {
@@ -221,7 +170,7 @@
                         "min-length": 1
                 },
                 "clock": {
-                        "timezone": "Europe/Berlin",
+                        "timezone": "Asia/Baku",
                         "format": "{:%H:%M}",
                         "rotate": 0,
                         "format-alt": "{:%d·%m·%y}",
@@ -434,6 +383,9 @@
                 },
                 "custom/separators": {
                         "format": " "
+                },
+                "custom/label": {
+                        "format": "Stand:"
                 }
         }
 ]
